@@ -19,9 +19,9 @@ runs:
       run: echo '${{ inputs.docker_image }}'
       shell: bash
 
-      - name: run docker image input
-        run: 'docker run ${{ inputs.docker_image }}'
-        shell: bash
+    - name: run docker image input
+      run: 'docker run ${{ inputs.docker_image }}'
+      shell: bash
 
 #     - name: Build `*.deb` packages
 #       uses: '${{ inputs.docker_image }}'
