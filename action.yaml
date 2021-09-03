@@ -1,6 +1,5 @@
-name: Build and Publish Packages
-description: Build Debian packages using CMakeify Me Docker image
-author: 'CMakeify Me <cmakeify.me@pm.me>'
+name: Build Package
+description: Build Debian packages using Docker image
 
 inputs:
 
@@ -9,13 +8,17 @@ inputs:
     required: true
 
 runs:
-  using: "composite"
+  using: 'composite'
 
   steps:
     - name: Check out the repository
       uses: actions/checkout@v2
 
-    - name: Build `*.deb` packages
-      uses: 'docker://${{inputs.docker_image}}'
-      with:
-        entrypoint: ./build.sh
+    - name: Spam
+      run: echo '${{ github.action_path }}'
+      shell: bash
+
+    #- name: Build `*.deb` packages
+      #uses: 'docker://${{inputs.docker_image}}'
+      #with:
+        #entrypoint: ./build.sh
