@@ -15,7 +15,11 @@ runs:
     - name: Check out the repository
       uses: actions/checkout@v2
 
-    - name: Build `*.deb` packages
-      uses: '${{ inputs.docker_image }}'
-      with:
-        entrypoint: ./build.sh
+    - name: Spam
+      run: echo '${{ inputs.docker_image }}'
+      shell: bash
+      
+#     - name: Build `*.deb` packages
+#       uses: '${{ inputs.docker_image }}'
+#       with:
+#         entrypoint: ./build.sh
