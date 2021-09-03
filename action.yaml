@@ -16,6 +16,6 @@ runs:
       uses: actions/checkout@v2
 
     - name: Build `*.deb` packages
-      uses: '${{ inputs.docker_image }}'
+      uses: 'docker://${{inputs.docker_image}}'
       with:
         entrypoint: ./build.sh
