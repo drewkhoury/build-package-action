@@ -15,11 +15,11 @@ runs:
     - name: Check out the repository
       uses: actions/checkout@v2
 
-    - name: Spam
+    - name: echo docker
       run: echo '${{ inputs.docker_image }}'
       shell: bash
 
-      - name: Spam
+      - name: run docker image input
         run: 'docker run ${{ inputs.docker_image }}'
         shell: bash
 
